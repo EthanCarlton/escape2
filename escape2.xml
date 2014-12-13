@@ -10,7 +10,4 @@
       <block type="movement_left" id="43"></block>
     </statement>
   </block>
-  <block type="sensor_object" id="33" x="195" y="158">
-    <field name="OBJECT">LEFTFRONT</field>
-  </block>
 </xml>
