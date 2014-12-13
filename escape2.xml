@@ -15,20 +15,7 @@
           </block>
         </value>
         <statement name="DO0">
-          <block type="movement_left" id="48">
-            <next>
-              <block type="robot_delay" id="51" inline="true">
-                <value name="DELAY">
-                  <block type="math_number" id="58">
-                    <field name="NUM">1500</field>
-                  </block>
-                </value>
-                <next>
-                  <block type="movement_stop" id="68"></block>
-                </next>
-              </block>
-            </next>
-          </block>
+          <block type="movement_forward" id="199"></block>
         </statement>
         <value name="IF1">
           <block type="sensor_object" id="132">
@@ -52,7 +39,20 @@
           </block>
         </statement>
         <statement name="ELSE">
-          <block type="movement_forward" id="199"></block>
+          <block type="movement_left" id="48">
+            <next>
+              <block type="robot_delay" id="51" inline="true">
+                <value name="DELAY">
+                  <block type="math_number" id="58">
+                    <field name="NUM">1500</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="movement_stop" id="68"></block>
+                </next>
+              </block>
+            </next>
+          </block>
         </statement>
       </block>
     </statement>
