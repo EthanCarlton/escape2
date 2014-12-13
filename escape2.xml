@@ -1,13 +1,76 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
-  <block type="controls_whileUntil" id="49" inline="false" x="5" y="28">
-    <field name="MODE">WHILE</field>
-    <value name="NUMBER">
-      <block type="sensor_button" id="56">
-        <field name="OBJECT">ENTER</field>
+  <block type="led_select" id="12" inline="true" x="10" y="5">
+    <field name="ACTION">ON</field>
+    <value name="LED">
+      <block type="math_number" id="19">
+        <field name="NUM">0</field>
       </block>
     </value>
-    <statement name="DO">
-      <block type="movement_left" id="43"></block>
-    </statement>
+    <next>
+      <block type="led_select" id="20" inline="true">
+        <field name="ACTION">ON</field>
+        <value name="LED">
+          <block type="math_number" id="21">
+            <field name="NUM">1</field>
+          </block>
+        </value>
+        <next>
+          <block type="led_select" id="22" inline="true">
+            <field name="ACTION">ON</field>
+            <value name="LED">
+              <block type="math_number" id="23">
+                <field name="NUM">2</field>
+              </block>
+            </value>
+            <next>
+              <block type="led_select" id="24" inline="true">
+                <field name="ACTION">ON</field>
+                <value name="LED">
+                  <block type="math_number" id="25">
+                    <field name="NUM">3</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="led_select" id="26" inline="true">
+                    <field name="ACTION">ON</field>
+                    <value name="LED">
+                      <block type="math_number" id="27">
+                        <field name="NUM">4</field>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="led_select" id="28" inline="true">
+                        <field name="ACTION">ON</field>
+                        <value name="LED">
+                          <block type="math_number" id="29">
+                            <field name="NUM">5</field>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="controls_whileUntil" id="1" inline="false">
+                            <field name="MODE">WHILE</field>
+                            <value name="NUMBER">
+                              <block type="sensor_button" id="2">
+                                <field name="OBJECT">ENTER</field>
+                              </block>
+                            </value>
+                            <statement name="DO">
+                              <block type="movement_left" id="3"></block>
+                            </statement>
+                            <next>
+                              <block type="movement_stop" id="39"></block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </next>
   </block>
 </xml>
